@@ -57,8 +57,8 @@ import (
 }*/
 
 var RoutingGroup = func(router *mux.Router){
-	router.HandleFunc("/images", controllers.UploadHandler).Methods("POST")
-	router.HandleFunc("/home", controllers.HomeHandler).Methods("GET")
+	router.HandleFunc("https://keeperoftheshadows.github.io/images", controllers.UploadHandler).Methods("POST")
+	router.HandleFunc("https://keeperoftheshadows.github.io/home", controllers.HomeHandler).Methods("GET")
 }
 
 /*func RunRouter(){ 
