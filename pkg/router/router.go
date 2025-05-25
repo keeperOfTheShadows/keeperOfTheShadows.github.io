@@ -58,6 +58,7 @@ import (
 
 var RoutingGroup = func(router *mux.Router){
 	router.HandleFunc("/images", controllers.UploadHandler).Methods("POST")
+	router.HandleFunc("/home", controllers.HomeHandler).Methods("GET")
 }
 
 /*func RunRouter(){ 

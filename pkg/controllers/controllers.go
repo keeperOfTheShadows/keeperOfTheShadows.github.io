@@ -16,7 +16,11 @@ var (
 )
 
 func init(){
-	tmpl, _ = template.ParseGlob("templates/*.html")
+	var err error
+	tmpl, err = template.ParseGlob("templates/*.html")
+	if err != nil{
+		fmt.Println("Error parsing templates:", err)
+	}
 }
 
 func HomeHandler(w http.ResponseWriter, r *http.Request){
@@ -41,7 +45,7 @@ func UploadHandler(w http.ResponseWriter, r *http.Request) {
 
 	fileName := filepath.Ext(handler.Filename)
 
-	filePath := filepath.Join("uploads", fileName)
+	filePath := filepath.Join("images", fileName)
 
 	dst, err := os.Create(filePath)
 	if err != nil{

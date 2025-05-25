@@ -12,9 +12,9 @@ var (
 
 const (
 	port = 3306
-	user = "shayan"
+	user = "root"
 	pass = "Mir@ge308"
-	dbname = "images"
+	dbname = "Amitis"
 )
 
 // dsn := "user:pass@tcp(127.0.0.1:3306)/dbname?charset=utf8mb4&parseTime=True&loc=Local"
